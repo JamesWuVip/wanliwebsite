@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>万里书院</title>
+    <title>万里书院2025</title>
     <!-- Tailwind CSS from a domestic CDN for faster loading in China -->
     <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <!-- Google Fonts replaced with a domestic mirror for accessibility in China -->
@@ -20,33 +20,42 @@
             background-size: cover;
             background-position: center;
         }
-        /* [优化] 调整了标题和副标题的字体大小和间距 */
         .section-title {
             @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4 tracking-wide;
         }
         .section-subtitle {
-            /* [优化] 减小了副标题下方的间距，使布局更紧凑 */
-            @apply text-center text-lg text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed;
+            @apply text-center text-lg text-gray-500 mb-16 max-w-3xl mx-auto leading-relaxed;
         }
         .cta-button {
             @apply bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl;
         }
+        /* 新增：为推荐语卡片添加样式 */
+        .testimonial-card::before {
+            content: '“';
+            font-size: 5rem;
+            color: #dbeafe;
+            position: absolute;
+            left: 1rem;
+            top: -1rem;
+            z-index: 1;
+            line-height: 1;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-600">
+<body class="bg-gray-50 text-gray-700">
 
     <!-- Header / Navigation -->
-    <header class="bg-white/80 shadow-md sticky top-0 z-50 backdrop-blur-sm">
+    <header class="bg-white/90 shadow-md sticky top-0 z-50 backdrop-blur-lg">
         <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
             <div>
                 <!-- 使用本地图片路径 -->
                 <img src="logo.png" alt="万里书院Logo" class="h-12">
             </div>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#opportunity" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">市场机遇</a>
+                <a href="#opportunity" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">市场痛点</a>
                 <a href="#solution" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">我们的方案</a>
                 <a href="#why-us" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">核心优势</a>
-                <a href="#ai-vision" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">未来蓝图</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">学员见证</a>
                 <a href="#partner" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">合作模式</a>
             </div>
             <a href="#contact" class="cta-button hidden md:inline-block !py-2 !px-6 !text-base !shadow-md">获取合作方案</a>
@@ -58,17 +67,17 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
-            <a href="#opportunity" class="block text-gray-700 font-medium hover:text-blue-600 py-2">市场机遇</a>
+            <a href="#opportunity" class="block text-gray-700 font-medium hover:text-blue-600 py-2">市场痛点</a>
             <a href="#solution" class="block text-gray-700 font-medium hover:text-blue-600 py-2">我们的方案</a>
             <a href="#why-us" class="block text-gray-700 font-medium hover:text-blue-600 py-2">核心优势</a>
-            <a href="#ai-vision" class="block text-gray-700 font-medium hover:text-blue-600 py-2">未来蓝图</a>
+            <a href="#testimonials" class="block text-gray-700 font-medium hover:text-blue-600 py-2">学员见证</a>
             <a href="#partner" class="block text-gray-700 font-medium hover:text-blue-600 py-2">合作模式</a>
             <a href="#contact" class="block mt-4 cta-button text-center">获取合作方案</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-white py-20 md:py-32">
+    <section class="hero-bg text-white py-24 md:py-40">
         <div class="container mx-auto px-4 sm:px-6 text-center">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">2025，寻求破局？</h1>
             <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">一个直击“提分”刚需、被市场验证的盈利项目，正是您穿越周期的最佳选择。</p>
@@ -76,14 +85,12 @@
         </div>
     </section>
 
-    <!-- [优化] 统一调整了所有板块的上下间距 (padding) -->
     <!-- The Opportunity Section -->
     <section id="opportunity" class="py-20">
         <div class="container mx-auto px-4 sm:px-6">
             <h2 class="section-title">您是否也面临同样的经营困境？</h2>
             <p class="section-subtitle">当市场竞争加剧，家长消费更趋理性，传统素质教育模式正面临严峻挑战。</p>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <!-- [优化] 增加了卡片阴影和hover效果, 调整了内部间距 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5">
                         <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H3"></path></svg>
@@ -141,34 +148,94 @@
         </div>
     </section>
 
-    <!-- Why Us Section -->
+    <!-- Why Us Section (Redesigned) -->
     <section id="why-us" class="py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            <h2 class="section-title">我们的核心优势</h2>
+            <h2 class="section-title">四大核心优势，为您保驾护航</h2>
             <p class="section-subtitle">选择万里书院，就是选择了一个高起点、高保障、高回报的成功事业。</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">顶尖教研团队</h3>
-                    <p>核心课程由北京一线名师团队倾力打造，确保教学品质与效果。</p>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="bg-orange-100 text-orange-500 rounded-lg w-16 h-16 flex items-center justify-center"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">顶尖教研团队</h3>
+                        <p>核心课程由北京一线名师团队倾力打造，紧扣考点，确保教学品质与提分效果。</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">成功模式验证</h3>
-                    <p>数百家门店成功运营经验，为您提供可复制的成功路径。</p>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="bg-orange-100 text-orange-500 rounded-lg w-16 h-16 flex items-center justify-center"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg></div>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">成功模式验证</h3>
+                        <p>数百家门店成功运营经验，为您提供从启动到运营全流程的可复制成功路径。</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">强大品牌背书</h3>
-                    <p>依托知名教育品牌战略投资，起点更高，信誉更有保障。</p>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="bg-orange-100 text-orange-500 rounded-lg w-16 h-16 flex items-center justify-center"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197m0 0A5.975 5.975 0 0112 13a5.975 5.975 0 016 2.803M15 21a6 6 0 00-9-5.197M6 21a6 6 0 019-5.197"></path></svg></div>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">强大品牌背书</h3>
+                        <p>依托知名教育品牌战略投资，起点更高，信誉更有保障，让您招生更轻松。</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center border-t-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">丰厚渠道回报</h3>
-                    <p>设计了极具吸引力的渠道政策，让每一位伙伴共享发展红利。</p>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="bg-orange-100 text-orange-500 rounded-lg w-16 h-16 flex items-center justify-center"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg></div>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">丰厚渠道回报</h3>
+                        <p>我们设计了极具吸引力的多层级渠道政策，让每一位伙伴都能共享品牌发展红利。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (New) -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="section-title">学员与家长怎么说？</h2>
+            <p class="section-subtitle">真实的口碑是我们最强大的信心来源，也是您未来校区运营最可靠的保障。</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg relative testimonial-card">
+                    <p class="relative z-10 text-lg leading-relaxed">“孩子五年级，以前最头疼的就是作文。在万里书院学了一个暑假，现在下笔有话说了，语文成绩从80多分稳定到了95分以上，真是选对了！”</p>
+                    <div class="mt-6 flex items-center">
+                        <img class="w-14 h-14 rounded-full" src="https://placehold.co/100x100/e0e0e0/757575?text=王" alt="家长头像">
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">王女士</p>
+                            <p class="text-sm text-gray-500">六年级学员 王梓涵 家长</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg relative testimonial-card">
+                    <p class="relative z-10 text-lg leading-relaxed">“这里的老师特别专业，不仅讲知识点，更注重思维方法的引导。孩子现在做阅读理解，思路比以前清晰多了，学校老师都表扬他进步大。”</p>
+                    <div class="mt-6 flex items-center">
+                        <img class="w-14 h-14 rounded-full" src="https://placehold.co/100x100/e0e0e0/757575?text=李" alt="家长头像">
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">李先生</p>
+                            <p class="text-sm text-gray-500">初一学员 李明哲 家长</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg relative testimonial-card md:col-span-2 lg:col-span-1">
+                    <p class="relative z-10 text-lg leading-relaxed">“作为加盟校，总部给的支持非常到位。从师训到开业活动，都有专人跟进。课程效果好，我们第一个班很快就招满了，家长续费也很积极。”</p>
+                    <div class="mt-6 flex items-center">
+                        <img class="w-14 h-14 rounded-full" src="https://placehold.co/100x100/e0e0e0/757575?text=张" alt="校长头像">
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">张校长</p>
+                            <p class="text-sm text-gray-500">万里书院 · 某市合作校区负责人</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- AI Vision Section -->
-    <section id="ai-vision" class="py-20 bg-white">
+    <section id="ai-vision" class="py-20">
         <div class="container mx-auto px-4 sm:px-6">
             <h2 class="section-title">布局未来：我们的“语文+AI”双核战略</h2>
             <p class="section-subtitle">加盟万里书院，不仅是选择一套成熟的盈利课程，更是投资一个清晰可见的领先未来。我们正前瞻性地规划“语文+AI”的完整生态，为所有合作伙伴构建通往未来的宽阔航道。</p>
@@ -199,7 +266,6 @@
             <h2 class="section-title">三大合作模式，总有一款适合您</h2>
             <p class="section-subtitle">无论您是实体校长，还是资源精英，我们都为您设计了量身定制的共赢方案。</p>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- [优化] 统一调整了卡片内部的文字、间距和视觉样式 -->
                 <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-blue-600 mb-4">课程合作门店</h3>
