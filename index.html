@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>万里书院</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS from a domestic CDN for faster loading in China -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts replaced with a domestic mirror for accessibility in China -->
+    <link href="https://fonts.google.cn/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Sans SC', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/3b82f6/ffffff?text=座无虚席的初一课堂');
+            /* IMPORTANT: For production, please download this image and host it locally with your website files. */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -32,8 +35,8 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div>
-                <!-- Logo Image Updated -->
-                <img src="https://placehold.co/240x60/ffffff/000000?text=万里书院" alt="万里书院Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/240x60/ffffff/000000?text=Logo+加载失败';">
+                <!-- Logo Image Placeholder - Replace with your actual logo.jpg file when deploying -->
+                <img src="https://placehold.co/240x60/ffffff/000000?text=万里书院&font=noto-sans-sc" alt="万里书院Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/240x60/ffffff/000000?text=Logo 加载失败';">
             </div>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#opportunity" class="text-gray-600 hover:text-blue-600">市场机遇</a>
@@ -101,7 +104,8 @@
             <p class="section-subtitle">我们不谈虚无缥缈的素质概念，我们专注于通过专业、体系化的课程，为孩子带来可量化的学业提升，满足家长最核心的付费需求。</p>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://placehold.co/600x400/dbeafe/3b82f6?text=Curriculum+Materials" alt="万里书院课程体系" class="rounded-lg shadow-xl w-full">
+                    <!-- IMPORTANT: For production, please download this image and host it locally with your website files. -->
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=600&auto=format&fit=crop" alt="万里书院课程体系" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">一套被市场验证的成功模型</h3>
