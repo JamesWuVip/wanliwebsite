@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>万里书院2025</title>
+    <title>万里书院</title>
     <!-- Tailwind CSS from a domestic CDN for faster loading in China -->
     <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <!-- Google Fonts replaced with a domestic mirror for accessibility in China -->
@@ -20,18 +20,15 @@
             background-size: cover;
             background-position: center;
         }
-        /* [优化] 调整了标题和副标题的字体大小和间距 */
         .section-title {
             @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-5 tracking-wide;
         }
         .section-subtitle {
-            /* [优化] 减小了副标题下方的间距，使布局更紧凑 */
             @apply text-center text-lg text-gray-500 mb-20 max-w-3xl mx-auto leading-relaxed;
         }
         .cta-button {
             @apply bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl;
         }
-        /* 新增：为推荐语卡片添加样式 */
         .testimonial-card::before {
             content: '“';
             font-size: 6rem;
