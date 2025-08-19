@@ -33,8 +33,7 @@
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div>
                 <!-- Logo Image Updated -->
-               <img src="https://placehold.co/240x60/ffffff/000000?text=万里书院" alt="万里书院Logo" class="h-12" ...>
-            
+                <img src="https://placehold.co/240x60/ffffff/000000?text=万里书院" alt="万里书院Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/240x60/ffffff/000000?text=Logo+加载失败';">
             </div>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#opportunity" class="text-gray-600 hover:text-blue-600">市场机遇</a>
@@ -46,7 +45,7 @@
             <a href="#contact" class="cta-button hidden md:inline-block !py-2 !px-6 !text-base">获取合作方案</a>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
@@ -230,24 +229,29 @@
             <h2 class="section-title !text-white">立即行动，抢占市场先机</h2>
             <p class="section-subtitle !text-gray-300">填写您的信息，我们的渠道发展顾问将即刻与您联系，并为您发送专属的合作方案详情。</p>
             <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-lg shadow-lg p-8">
-                <form>
+                <!-- Formspree Endpoint Updated -->
+                <form action="https://formspree.io/f/xjkodndb" method="POST">
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label for="name" class="block mb-2 font-bold">您的姓名</label>
-                            <input type="text" id="name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请输入您的姓名" required>
+                            <!-- Added name="name" attribute -->
+                            <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请输入您的姓名" required>
                         </div>
                         <div>
                             <label for="phone" class="block mb-2 font-bold">联系电话</label>
-                            <input type="tel" id="phone" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请输入您的手机号码" required>
+                            <!-- Added name="phone" attribute -->
+                            <input type="tel" id="phone" name="phone" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请输入您的手机号码" required>
                         </div>
                     </div>
                     <div class="mb-6">
                         <label for="city" class="block mb-2 font-bold">所在城市</label>
-                        <input type="text" id="city" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请输入您所在的城市" required>
+                        <!-- Added name="city" attribute -->
+                        <input type="text" id="city" name="city" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请输入您所在的城市" required>
                     </div>
                     <div class="mb-6">
                         <label for="partner-type" class="block mb-2 font-bold">感兴趣的合作模式</label>
-                        <select id="partner-type" class="w-full p-3 border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <!-- Added name="partner-type" attribute -->
+                        <select id="partner-type" name="partner-type" class="w-full p-3 border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <option>课程合作门店（直接加盟）</option>
                             <option>引荐伙伴</option>
                             <option>区域合伙人</option>
